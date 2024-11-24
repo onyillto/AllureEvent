@@ -124,12 +124,12 @@
         <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <div class="max-w-lg">
                 <h2 class="text-3xl font-bold text-white mb-8 text-center">About Us</h2>
-                <p class="mt-4 text-gray-900 text-lg">
+                <p class="mt-4 text-white font-normal text-medium">
                     At Allure Event, we specialize in crafting unforgettable experiences that leave a lasting impression. Whether you're planning an intimate gathering, a corporate conference, or a grand celebration, our team of expert planners and designers are dedicated to turning your vision into reality. With a keen eye for detail and a passion for perfection, we provide end-to-end event services—from concept development and venue selection to design, logistics, and day-of coordination....
                 </p>
             </div>
             <div class="mt-12 md:mt-0">
-                <img src="/corp.jpg" alt="About Us Image" class="object-cover rounded-lg shadow-md" />
+                <img src="/corp.jpg" alt="About Us Image" class="object-cover rounded-lg shadow-md h-[490px]" />
             </div>
         </div>
     </div>

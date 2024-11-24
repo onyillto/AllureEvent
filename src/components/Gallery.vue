@@ -1,112 +1,64 @@
 <template>
-  <div class="image-wrapper">
-    <p v-for="(imagesRow, index) in groupedImages" :key="index">
-      <img 
-        v-for="(src, imgIndex) in imagesRow" 
-        :src="`/${src}`" 
-        :key="imgIndex" 
-        :class="`image image-${imagesRow.length}`"
-        alt="random image"
-      />
-    </p>
+  <div class="container mx-auto px-4 py-8">
+    <!-- Title -->
+    <h1 class="text-3xl font-light text-center sm:text-left mt-4 mb-6">Thumbnail Gallery</h1>
+
+    <!-- Horizontal line -->
+    <hr class="my-5">
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="col-span-1">
+        <a href="#" class="block mb-4">
+          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/g1.jpg" alt="Thumbnail 1">
+        </a>
+      </div>
+      <div class="col-span-1">
+        <a href="#" class="block mb-4">
+          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/g2.jpg" alt="Thumbnail 2">
+        </a>
+      </div>
+      <div class="col-span-1">
+        <a href="#" class="block mb-4">
+          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/g3.jpg" alt="Thumbnail 3">
+        </a>
+      </div>
+      <div class="col-span-1">
+        <a href="#" class="block mb-4">
+          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/g4.jpg" alt="Thumbnail 4">
+        </a>
+      </div>
+      <div class="col-span-1">
+        <a href="#" class="block mb-4">
+          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/g6.jpg" alt="Thumbnail 5">
+        </a>
+      </div>
+      <div class="col-span-1">
+        <a href="#" class="block mb-4">
+          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/g6.jpg" alt="Thumbnail 6">
+        </a>
+      </div>
+     
+      <div class="col-span-1">
+        <a href="#" class="block mb-4">
+          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/g6.jpg" alt="Thumbnail 11">
+        </a>
+      </div>
+      <div class="col-span-1">
+        <a href="#" class="block mb-4">
+          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/g6.jpg" alt="Thumbnail 12">
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ImagePathAnimation',
-  data() {
-    return {
-      // Directly specify the image names located in the root of the public folder
-      images: [
-        "consulting.jpg", 
-        "corp.jpg", 
-        "corp2.jpg", 
-        "even-plan.jpg", 
-        "vendor.jpg"
-      ], // Add your image names here
-    };
-  },
-  computed: {
-    groupedImages() {
-      const groups = [];
-      let i = 0;
-      while (i < this.images.length) {
-        groups.push(this.images.slice(i, i + 5)); // Adjust grouping size as needed
-        i += 5;
-      }
-      return groups;
-    },
-  },
-};
+  name: 'ThumbnailGallery',
+}
 </script>
 
 <style scoped>
-.image-wrapper {
-  width: 500px;
-  margin: 100px auto;
-  position: relative;
-}
-
-p {
-  height: 200px;
-  position: relative;
-}
-
-.image {
-  height: 100px;
-  position: absolute;
-  left: 0;
-  box-shadow: 1px 1px 3px #0008;
-  transition: transform 0.4s ease-out, offset-path 0.4s cubic-bezier(0.77, -1.17, 0.75, 0.84),
-              box-shadow 0.3s, z-index 0.3s;
-  z-index: 0;
-}
-
-.image:hover {
-  transform: scale(3);
-  offset-path: path('m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0');
-  box-shadow: 3px 4px 10px #0006;
-  z-index: 999;
-}
-
-.image-3:nth-last-child(3):first-child {
-  offset-distance: 17%;
-}
-.image-3:nth-last-child(2):nth-child(2) {
-  offset-distance: 49%;
-}
-.image-3:last-child:nth-child(3) {
-  offset-distance: 81%;
-}
-
-.image-4:nth-last-child(4):first-child {
-  offset-distance: 10%;
-}
-.image-4:nth-last-child(3):nth-child(2) {
-  offset-distance: 35%;
-}
-.image-4:nth-last-child(2):nth-child(3) {
-  offset-distance: 65%;
-}
-.image-4:last-child:nth-child(4) {
-  offset-distance: 90%;
-}
-
-.image-5:nth-last-child(5):first-child {
-  offset-distance: 0%;
-}
-.image-5:nth-last-child(4):nth-child(2) {
-  offset-distance: 25%;
-}
-.image-5:nth-last-child(3):nth-child(3) {
-  offset-distance: 51%;
-}
-.image-5:nth-last-child(2):nth-child(4) {
-  offset-distance: 75%;
-}
-.image-5:last-child:nth-child(5) {
-  offset-distance: 100%;
-}
+/* Additional custom styles (if necessary) */
 </style>
-
