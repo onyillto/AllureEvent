@@ -10,7 +10,7 @@
       <!-- Desktop Menu Links -->
       <div class="hidden lg:flex space-x-8">
         <a href="#" class="font-medium text-gray-700 hover:text-gray-900">Features</a>
-        <a href="#" class="font-medium text-gray-700 hover:text-gray-900">About</a>
+        <a href="/about" class="font-medium text-gray-700 hover:text-gray-900">About</a>
         <a href="#" class="font-medium text-gray-700 hover:text-gray-900">Gallery</a>
         <a href="#" class="font-medium text-gray-700 hover:text-gray-900">Pricing</a>
       </div>

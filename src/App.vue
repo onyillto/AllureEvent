@@ -4,13 +4,13 @@
     <main class="main-content">
       <router-view /> <!-- This is where your page content will be rendered -->
     </main>
-    <!-- <Footer/> -->
+     <Footer/> 
   </div>
 </template>
 
 <script setup>
 import Navbar from "./components/Navbar.vue";
-// import Footer from "./components/Footer.vue";
+ import Footer from "./components/Footer.vue";
 </script>
 
 <style>
