@@ -20,36 +20,32 @@ export default {
       quotes: [
         {
           text: "The event decor was absolutely stunning! Every detail was perfectly coordinated, and it truly transformed the venue into something magical. The flowers, lighting, and table settings exceeded our expectations!",
-          image: "https://via.placeholder.com/90",
-          imageAlt: "decor1",
+          
           author: "Sophia Reynolds",
           website: "EventPlannersHub.com"
         },
         {
           text: "I couldn’t believe how amazing everything looked! From the elegant centerpieces to the intricate drapery, every corner of the venue was filled with beauty and style. We felt like we were in a fairy tale.",
-          image: "https://via.placeholder.com/90",
-          imageAlt: "decor2",
+          
           author: "Liam O’Connor",
           website: "TheWeddingStudio.com"
         },
         {
           text: "The decor was flawless! The attention to detail was incredible. Our guests couldn’t stop talking about how unique and personalized the setup was. It really brought our vision to life in a way I never imagined.",
-          image: "https://via.placeholder.com/90",
-          imageAlt: "decor3",
+          
           author: "Emma Dawson",
           website: "DreamEventsDecor.com"
         },
         {
           text: "Every detail of the event decor was perfectly executed. From the stunning floral arrangements to the chic lighting, everything came together beautifully. It truly set the tone for an unforgettable evening.",
-          image: "https://via.placeholder.com/90",
-          imageAlt: "decor4",
+          
+          
           author: "James Alexander",
           website: "ElegantOccasions.com"
         },
         {
           text: "The decor was beyond my wildest dreams! It was clear that the team took the time to understand my vision and bring it to life with creativity and precision. I couldn’t be happier with how everything turned out!",
-          image: "https://via.placeholder.com/90",
-          imageAlt: "decor5",
+          
           author: "Olivia Turner",
           website: "ChicEventDesigns.com"
         }

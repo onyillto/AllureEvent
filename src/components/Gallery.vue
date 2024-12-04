@@ -30,23 +30,23 @@
       </div>
       <div class="col-span-1">
         <a href="#" class="block mb-4">
-          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/g6.jpg" alt="Thumbnail 5">
+          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/img6.jpg" alt="Thumbnail 5">
         </a>
       </div>
       <div class="col-span-1">
         <a href="#" class="block mb-4">
-          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/g6.jpg" alt="Thumbnail 6">
+          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/img4.jpg" alt="Thumbnail 6">
         </a>
       </div>
      
       <div class="col-span-1">
         <a href="#" class="block mb-4">
-          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/g6.jpg" alt="Thumbnail 11">
+          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/img2.jpg" alt="Thumbnail 11">
         </a>
       </div>
       <div class="col-span-1">
         <a href="#" class="block mb-4">
-          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/g6.jpg" alt="Thumbnail 12">
+          <img class="w-full h-auto rounded-lg shadow-lg" src="/public/img3.jpg" alt="Thumbnail 12">
         </a>
       </div>
     </div>

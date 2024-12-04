@@ -4,6 +4,8 @@ import { createRouter, createWebHistory } from "vue-router"; // Import Vue Route
 import Home from "./views/Home.vue"; // Import the Home component
 import About from "./views/About.vue"
 import Gallery from "./views/Gallery.vue";
+
+import Contact from "./views/Contact.vue";
 import "./style.css";
 
 // Define your routes
@@ -22,6 +24,11 @@ const routes = [
     path: "/gallery", // Define the path for the home route
     name: "Gallery",
     component: Gallery, // Set the component for the route
+  },
+  {
+    path: "/contact-us", // Define the path for the home route
+    name: "Contact",
+    component: Contact, // Set the component for the route
   },
 ];
 
