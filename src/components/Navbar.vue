@@ -1,15 +1,16 @@
 <template>
   <section class="overflow-hidden">
     <!-- Navbar -->
-    <nav class="flex items-center justify-between px-5 py-4 bg-white shadow-md">
+    <nav class="flex items-center justify-between px-12 py-4 bg-white shadow-md">
       <!-- Logo -->
-      <a href="/" class="text-2xl font-bold">
-        <span class="text-[#f22282]">Allure</span><span class="text-black">Event</span>
+      <a href="/" class="h-[62px] w-[62px]">
+        <img src="/public/logo.svg" alt="Allure Event" class="text-2xl font-bold" />
       </a>
 
       <!-- Desktop Menu Links -->
       <div class="hidden lg:flex space-x-8">
         <a href="/about" class="font-medium text-gray-700 hover:text-gray-900">About</a>
+                <a href="/gallery" class="font-medium text-gray-700 hover:text-gray-900">Services</a>
         <a href="/gallery" class="font-medium text-gray-700 hover:text-gray-900">Gallery</a>
       </div>
 
@@ -34,7 +35,7 @@
       <!-- Close Button -->
       <div class="flex items-center justify-between mb-8">
         <a href="#" class="text-2xl font-bold">
-          <span class="text-[#f22282]">Allure</span><span class="text-black">Event</span>
+          <img src="/logo.svg" alt="Allure Event" class="text-2xl font-bold" />
         </a>
         <button @click="toggleMobileNav" class="text-gray-700">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
@@ -46,6 +47,7 @@
       <!-- Mobile Menu Links -->
       <div class="flex-grow space-y-6">
         <a href="/about" class="block font-medium text-gray-700 hover:text-gray-900">About</a>
+        <a href="/service" class="block font-medium text-gray-700 hover:text-gray-900">Services</a>
         <a href="/gallery" class="block font-medium text-gray-700 hover:text-gray-900">Gallery</a>
       </div>
 

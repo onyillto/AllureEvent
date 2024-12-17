@@ -7,22 +7,26 @@
       class="absolute top-0 left-0 w-full h-full object-cover"
     >
       <source src="/hero-vid.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
+     
     </video>
-    <div class="flex flex-col items-center justify-center w-full h-full bg-black/60"> <!-- Darker overlay for visibility -->
-      <div class="text-center z-10"> <!-- Ensure text is above the video -->
-        <h5 class="custom-heading text-white">Allure Corporate Events</h5>
-        <h1 class="text-3xl font-semibold text-white lg:text-4xl">
-          <span class="text-white br">UNIQUE</span>
-          <span class="text--##f22282"> CREATIVE EXTRAORDINARY</span>
-        </h1>
-      </div>
-      <router-link to="/products" class="mt-4"> <!-- Added margin to separate button from text -->
-        <button class="w-full px-5 py-2 sm:w-[30%] text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-[#f22282] rounded-md lg:w-auto md:w-1/2 hover:bg-red-700 focus:outline-none focus:bg-red-700 md:text-base md:px-4 md:py-3">
-          Contact Us
-        </button>
-      </router-link>
-    </div>
+  <div class="flex flex-col items-center justify-center w-full h-full bg-black/60"> <!-- Darker overlay for visibility -->
+  <div class="text-center z-10 bg-pink-500/20 border border-white rounded-lg p-6 mx-4 max-w-2xl"> <!-- Pink background -->
+    <h5 class="custom-heading text-white">Allure Corporate Events</h5>
+    <h1 class="text-3xl font-semibold text-white lg:text-2xl">
+      <span class="text-white br">Transforming Your Events Into Unforgettable Experiences</span>
+    </h1>
+    <p class="text-lg text-gray-100">
+      With our team's expertise, we cover every detail to ensure your event is flawless from start to finish.
+    </p>
+  </div>
+  <router-link to="/products" class="mt-4"> <!-- Added margin to separate button from text -->
+    <button class="w-full px-5 py-2 sm:w-[30%] text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-[#bd933b] rounded-md lg:w-auto md:w-1/2 hover:bg-red-700 focus:outline-none focus:bg-red-700 md:text-base md:px-4 md:py-3">
+      Plan My Invite
+    </button>
+  </router-link>
+</div>
+
+
   </header>
 </template>
 <style scoped>

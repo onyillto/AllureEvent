@@ -1,166 +1,140 @@
 <template>
   <div class="snippets-container">
-    <figure class="snip1157" v-for="(quote, index) in quotes" :key="index">
-      <blockquote>
-        {{ quote.text }}
-        <div class="arrow"></div>
-      </blockquote>
-      <img :src="quote.image" :alt="quote.imageAlt" />
-      <div class="author">
-        <h5>{{ quote.author }} <span>{{ quote.website }}</span></h5>
-      </div>
-    </figure>
+    <swiper
+      :modules="[Navigation, Pagination, Autoplay]"
+      :slides-per-view="1"
+      :space-between="20"
+      :navigation="true"
+      :pagination="{ clickable: true }"
+      :autoplay="{ delay: 5000, disableOnInteraction: false }"
+      loop
+    >
+      <swiper-slide v-for="(quote, index) in quotes" :key="index">
+        <figure class="snip1157">
+          <blockquote>
+            {{ quote.text }}
+            <div class="arrow"></div>
+          </blockquote>
+          <div class="author">
+            <h5>{{ quote.author }} <span>{{ quote.website }}</span></h5>
+          </div>
+        </figure>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+
 export default {
+  components: { Swiper, SwiperSlide },
   data() {
     return {
       quotes: [
         {
           text: "The event decor was absolutely stunning! Every detail was perfectly coordinated, and it truly transformed the venue into something magical. The flowers, lighting, and table settings exceeded our expectations!",
-          
           author: "Sophia Reynolds",
-          website: "EventPlannersHub.com"
+          website: "EventPlannersHub.com",
         },
         {
           text: "I couldn’t believe how amazing everything looked! From the elegant centerpieces to the intricate drapery, every corner of the venue was filled with beauty and style. We felt like we were in a fairy tale.",
-          
           author: "Liam O’Connor",
-          website: "TheWeddingStudio.com"
+          website: "TheWeddingStudio.com",
         },
         {
-          text: "The decor was flawless! The attention to detail was incredible. Our guests couldn’t stop talking about how unique and personalized the setup was. It really brought our vision to life in a way I never imagined.",
-          
+          text: "The decor was flawless! The attention to detail was incredible. Our guests couldn’t stop talking about how unique and personalized the setup was.",
           author: "Emma Dawson",
-          website: "DreamEventsDecor.com"
+          website: "DreamEventsDecor.com",
         },
         {
-          text: "Every detail of the event decor was perfectly executed. From the stunning floral arrangements to the chic lighting, everything came together beautifully. It truly set the tone for an unforgettable evening.",
-          
-          
+          text: "Every detail of the event decor was perfectly executed. From the stunning floral arrangements to the chic lighting, everything came together beautifully.",
           author: "James Alexander",
-          website: "ElegantOccasions.com"
+          website: "ElegantOccasions.com",
         },
-        {
-          text: "The decor was beyond my wildest dreams! It was clear that the team took the time to understand my vision and bring it to life with creativity and precision. I couldn’t be happier with how everything turned out!",
-          
-          author: "Olivia Turner",
-          website: "ChicEventDesigns.com"
-        }
-      ]
-    }
-  }
-}
+      ],
+    };
+  },
+  setup() {
+    return { Navigation, Pagination, Autoplay };
+  },
+};
 </script>
 
-
 <style scoped>
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
-
+.swiper-slide{
+  color: #ffb8ff;
+}
 .snippets-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: wrap;
-  margin: 0;
-  height: 100%;
-  margin-top:0 ;
   background-color: #ffb8ff;
+  margin: 0;
+  padding: 40px 0;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 800px;
 }
 
 figure.snip1157 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: 'Raleway', Arial, sans-serif;
   position: relative;
-  overflow: hidden;
-  margin: 10px;
-  min-width: 220px;
-  max-width: 310px;
-  width: 100%;
+  margin: 10px auto;
+  text-align: center; /* Center the text */
   color: #333;
-  text-align: left;
-  box-shadow: none !important;
-}
-
-figure.snip1157 * {
-  box-sizing: border-box;
-  transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
-}
-
-figure.snip1157 img {
-  max-width: 100%;
-  vertical-align: middle;
-  height: 90px;
-  width: 90px;
-  border-radius: 50%;
-  margin: 40px 0 0 10px;
+  background-color: #fafafa;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
 }
 
 figure.snip1157 blockquote {
-  display: block;
-  border-radius: 8px;
-  position: relative;
-  background-color: #fafafa;
-  padding: 25px 50px 30px 50px;
-  font-size: 0.8em;
-  font-weight: 500;
-  margin: 0;
-  line-height: 1.6em;
+  font-size: 1em;
   font-style: italic;
-}
-
-figure.snip1157 blockquote:before,
-figure.snip1157 blockquote:after {
-  font-family: 'FontAwesome';
-  content: "\201C";
-  position: absolute;
-  font-size: 50px;
-  opacity: 0.3;
-  font-style: normal;
-}
-
-figure.snip1157 blockquote:before {
-  top: 25px;
-  left: 20px;
-}
-
-figure.snip1157 blockquote:after {
-  content: "\201D";
-  right: 20px;
-  bottom: 0;
+  line-height: 1.8em;
+  margin: 0 0 20px;
+  position: relative;
+  text-align: center;
 }
 
 figure.snip1157 .arrow {
-  top: 100%;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
   height: 0;
-  border-left: 0 solid transparent;
-  border-right: 25px solid transparent;
-  border-top: 25px solid #fafafa;
-  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #fafafa;
 }
 
-figure.snip1157 .author {
-  position: absolute;
-  bottom: 45px;
-  padding: 0 10px 0 120px;
-  margin: 0;
+.author {
+  font-weight: bold;
+  color: #333;
   text-transform: uppercase;
-  color: #ffffff;
-  transform: translateY(50%);
+  margin-top: 10px;
 }
 
-figure.snip1157 .author h5 {
-  opacity: 0.8;
-  margin: 0;
-  font-weight: 800;
-}
-
-figure.snip1157 .author h5 span {
-  font-weight: 400;
+.author span {
+  display: block;
+  font-weight: normal;
   text-transform: none;
-  padding-left: 5px;
+  color: #666;
+  font-size: 0.9em;
 }
 </style>
+
