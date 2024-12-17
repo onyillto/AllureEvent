@@ -29,7 +29,7 @@ const routes = [
     component: Gallery, // Set the component for the route
   },
   {
-    path: "/contact-us", // Define the path for the home route
+    path: "/contact", // Define the path for the home route
     name: "Contact",
     component: Contact, // Set the component for the route
   },
